@@ -7,13 +7,12 @@
 
 function filterBeers(listBeers,partNameChosen,ibuChosen){
 
-let arrayCervezas = listBeers.filter(item =>item.name.includes(partNameChosen) && item.ibu > ibuChosen)
+let arrayCervezas = listBeers.filter(item =>item.name.includes(partNameChosen.toLowerCase()) && item.ibu > ibuChosen)
 
     // console.log(arrayCervezas);
-return arrayCervezas
+return arrayCervezas;
 }
 
 
 console.log(filterBeers(beers,"be",10));
 
-// item.title === partNameChosen.abv  && item.ibu > ibuChosen.ibu
